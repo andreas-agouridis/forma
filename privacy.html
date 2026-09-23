@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy & Local Data: How Forma Handles Your Creations</title>
+  <meta name="description" content="Learn where Forma stores drafts and images, how your Pollinations connection works, which services receive data, and how to clear your local creation history.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="privacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forma">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Your ideas, your data — Forma privacy">
+  <meta property="og:description" content="A clear explanation of browser storage, provider requests and your creative connection.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy & Local Data — Forma">
+  <meta name="twitter:description" content="How drafts, generated images and provider connections are handled in the Forma image studio.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d4f78a'/%3E%3Ctext x='20' y='49' font-family='Arial' font-weight='bold' font-size='52' fill='%23101113'%3Ef%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site-config.js" defer></script>
+  <script src="discovery.js" defer></script>
+  <script id="structured-data" type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","@id":"#privacy","name":"Privacy and local data in Forma","description":"How the Forma browser application handles prompts, generated images and provider access tokens.","inLanguage":"en","dateModified":"2026-09-20"}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to privacy information</a>
+  <div class="content-shell">
+    <header class="site-header"><a class="brand" href="./" aria-label="Forma home"><span class="brand-mark" aria-hidden="true">f<span>·</span></span><span>forma<span class="brand-period">.</span></span></a><nav aria-label="Main navigation"><a href="./#studio">Image studio ↗</a><a href="guide.html">Prompt guide</a><a href="privacy.html" aria-current="page">Privacy</a></nav></header>
+    <main id="content" class="document-main">
+      <div class="document-hero"><p class="eyebrow">A CLEARER PICTURE</p><h1>Your ideas.<br><span>Your creative space.</span></h1><p>Here’s what the Forma application stores, where requests go, and how to stay in control of your creations.</p><span class="document-meta">Application data practices · Updated <time datetime="2026-09-20">September 20, 2026</time></span></div>
+      <div class="prose">
+        <section id="overview"><h2>What Forma does</h2><p>Forma is a static HTML, CSS and JavaScript image studio. It connects your browser directly to Pollinations for AI generation and prompt refinement. The application includes no analytics scripts, advertising trackers or Forma-operated account database.</p><p>Your hosting provider may maintain ordinary access logs. The practices of a website operator or hosting service are separate from the application behavior described here.</p></section>
+        <section id="browser-storage"><h2>What stays in your browser</h2><ul><li><strong>Your current draft and settings</strong> are saved in localStorage, when available, so you can return to them later.</li><li><strong>Up to 12 recent generated images</strong>, their prompts and settings are saved in IndexedDB, when available. Image files are stored as local browser blobs, not published into a shared Forma gallery.</li><li><strong>Your provider access token</strong> is kept in page memory only. It is not stored in localStorage, IndexedDB, a URL or application logs. Refreshing the page requires reconnecting.</li></ul><p>If browser storage is blocked or full, the studio continues with session-only data and displays a storage message. Browser storage is not a backup: download the images you want to keep.</p></section>
+        <section id="provider-data"><h2>What is sent to Pollinations</h2><p>When you connect, the browser requests a device code and checks whether you have approved it. Pollinations controls sign-in, authorization, model permissions, budgets and revocation. Forma does not receive your provider password.</p><p>When you generate, your browser sends the assembled image prompt, model, dimensions, seed and any supported quality settings to Pollinations. When you select Refine with AI, it sends your description and aesthetic to a text model through Pollinations. Access tokens are supplied in authorization headers on authenticated API calls.</p><p>The public model catalog is also requested to show availability, health and price information. Pollinations and its upstream providers process generation requests under their own data practices. This application does not promise that provider requests are anonymous or that providers retain no data. Visit <a href="https://pollinations.ai" target="_blank" rel="noopener noreferrer">Pollinations ↗</a> for its current policies.</p></section>
+        <section id="external-assets"><h2>Fonts and reference photography</h2><p>The pages request fonts from Google Fonts. Inspiration cards load reference photographs from Unsplash. Those services receive the normal network information associated with loading a resource, such as your IP address. Image prompts and connection tokens are not sent to either service by the application.</p><p>System font fallbacks and local CSS artwork keep the interface usable if external assets do not load.</p></section>
+        <section id="delete-data"><h2>How to remove your data</h2><ul><li>Choose <strong>Clear local history</strong> in the studio to remove saved image records. The currently displayed canvas remains available until replaced or the page is closed.</li><li>Clear this site’s storage in your browser settings to remove both draft and image history.</li><li>Choose <strong>Disconnect this session</strong> in Connection settings, or reload the page, to discard the in-memory token.</li><li>To revoke the authorization itself, use your <a href="https://enter.pollinations.ai" target="_blank" rel="noopener noreferrer">Pollinations dashboard ↗</a>. Disconnecting locally does not revoke the provider-side grant.</li></ul><p>Files you download are saved outside the application’s browser storage. Delete those files separately if needed.</p></section>
+        <section><h2>About sharing and downloads</h2><p>Copy prompt copies only the assembled generation prompt. Downloads contain the image returned by the provider, at its actual dimensions. Forma does not publish your result to a social network or upload it to an additional service.</p><p>Ownership, licensing, public-media behavior and permitted uses of provider-generated content depend on the applicable provider and model terms.</p><div class="callout"><p>For generation help, see the <a href="guide.html#troubleshooting">troubleshooting guide</a> or return to <a href="./#studio">your studio ↗</a>.</p></div></section>
+      </div>
+    </main>
+    <footer><a href="./" class="footer-brand">forma.</a><span>A space for your imagination.</span><nav aria-label="Footer"><a href="./">Image studio</a><a href="guide.html">Prompt guide</a><a href="./#faq">FAQ</a></nav><span class="footer-spark" aria-hidden="true">✳</span></footer>
+  </div>
+</body>
+</html>

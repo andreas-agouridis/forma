@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Prepare a static Forma site for publishing with domain-specific metadata, a sitemap, crawler guidance and social preview artwork.">
+  <title>Publishing Kit — Forma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="publish.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to publishing kit</a>
+  <div class="content-shell">
+    <header class="site-header"><a class="brand" href="./" aria-label="Forma home"><span class="brand-mark" aria-hidden="true">f<span>·</span></span><span>forma<span class="brand-period">.</span></span></a><nav aria-label="Main navigation"><a href="./">Image studio ↗</a><a href="guide.html">Prompt guide</a></nav></header>
+    <main id="content" class="document-main">
+      <div class="document-hero"><p class="eyebrow">A GOOD FIRST IMPRESSION, EVERYWHERE</p><h1>Ready for the world.<br><span>Made for discovery.</span></h1><p>Add your real website address to produce a deployment-ready ZIP. Everything runs in your browser; the source site still uses only HTML, CSS and JavaScript.</p></div>
+      <form id="publish-form" class="publish-panel">
+        <label for="site-url">Public site URL</label><input id="site-url" type="url" required placeholder="https://your-domain.com/" aria-describedby="url-hint"><p class="field-hint" id="url-hint">Use the exact production folder, including a subdirectory if needed. No query strings or fragments.</p>
+        <label for="source-files">Source files <span class="optional">REQUIRED WHEN OPENED LOCALLY</span></label><input id="source-files" type="file" multiple accept=".html,.css,.js" aria-describedby="source-hint"><p class="field-hint" id="source-hint">When using file://, select this project’s HTML, CSS and JavaScript files. When hosted, the helper can read them from the same folder. Files are processed locally, not uploaded.</p>
+        <button type="submit" id="build-package" class="generate-button">Download publishing ZIP <span aria-hidden="true">↗</span></button><output id="publish-status" role="status"></output>
+      </form>
+      <div class="prose">
+        <section><h2>What the publishing kit includes</h2><ul><li>Your complete static studio, guide and privacy pages, with <strong>absolute canonical URLs</strong> and page-specific Open Graph and Twitter metadata in the original HTML.</li><li>Structured data with real page URLs, matching the visible application, guide and FAQ content.</li><li>A <strong>1200 × 630 social-preview PNG</strong>, a favicon and an Apple touch icon, generated locally from Forma’s visual identity.</li><li><strong>sitemap.xml</strong> containing the three public content pages, and <strong>robots.txt</strong> with the correct sitemap URL.</li><li><strong>llms.txt</strong> and <strong>llms-full.txt</strong> with factual summaries, source links and readable site content for tools that support these emerging conventions.</li></ul></section>
+        <section><h2>Publish in three steps</h2><ol><li>Enter your real URL, generate the ZIP, and unzip its contents into the corresponding static hosting folder.</li><li>Place <strong>robots.txt at the domain root</strong>. If the app lives in a subdirectory, merge the generated sitemap line into an existing root robots.txt instead of replacing unrelated rules. Put the generated llms files at the root if you want the conventional discovery location.</li><li>Open the hosted site, check canonical and social preview URLs, then submit the sitemap in <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">Google Search Console ↗</a> and <a href="https://www.bing.com/webmasters" target="_blank" rel="noopener noreferrer">Bing Webmaster Tools ↗</a>.</li></ol><p>The original HTML already includes descriptive titles, useful content, accessible navigation and structured data. This helper adds the domain-specific information that cannot be finalized before a hosting address is known.</p></section>
+        <section><h2>SEO, GEO and AI discoverability</h2><p>GEO here means <strong>generative engine optimization</strong>: making the site’s actual features, instructions, limits and sources clear enough to retrieve and cite. It does not mean adding geographic targeting.</p><p>The public pages use direct answers, semantic headings, source citations, descriptive internal links, and matching structured data. The interactive studio and private local image history are separate from the crawlable guide and product explanations. No user prompts, images or tokens are included in this publishing package.</p><p>Crawler access and machine-readable summaries support discovery. Search indexing, rankings, rich results and AI citations are decisions made by the respective services, rather than features an application can guarantee.</p></section>
+      </div>
+    </main>
+    <footer><a href="./" class="footer-brand">forma.</a><span>A space for your imagination.</span><nav aria-label="Footer"><a href="./">Image studio</a><a href="guide.html">Prompt guide</a><a href="privacy.html">Privacy</a></nav></footer>
+  </div>
+</body>
+</html>
